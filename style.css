@@ -223,7 +223,18 @@ footer {
     flex: 1;
     min-width: 200px;
     margin: 10px;
+    padding: 10px;
 }
+
+/* .footer-section-about {
+    border-left: 1px solid #d43f00;
+    padding-left: 10px;
+}
+
+.footer-section-social {
+    border-right: 1px solid #d43f00;
+    padding-right: 10px;
+} */
 
 .footer-section h4 {
     margin-bottom: 10px;
@@ -252,13 +263,13 @@ footer {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .social-icons img:hover {
