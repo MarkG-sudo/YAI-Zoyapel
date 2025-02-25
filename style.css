@@ -293,4 +293,13 @@ footer {
         min-width: 100%;
         margin: 10px 0;
     }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
 }
