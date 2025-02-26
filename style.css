@@ -1,12 +1,24 @@
+html {
+    background-color: #dbdde077;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #dbdde077;
+
 }
+
 header {
     text-align: center;
-    padding: 15px 30px 20px 30px; /* top right bottom left */
+    padding: 15px 30px 20px 30px;
+    /* top right bottom left */
     background: #ffcc00;
     position: sticky;
     top: 0;
@@ -22,7 +34,8 @@ header {
 header h1 {
     margin: 0;
     padding: 0;
-    font-size: 20px; /* Adjust font size if necessary */
+    font-size: 20px;
+    /* Adjust font size if necessary */
 }
 
 .nav-container {
@@ -97,8 +110,11 @@ nav ul li {
 
 nav ul a {
     text-decoration: none;
-    color: #333;
-    font-weight: 900; /* Made the font bolder */
+    /* color: #333; */
+    color: #3e6606;
+    font-weight: 900;
+    /* Made the font bolder */
+    font-size: large;
     font-family: 'Poppins', sans-serif;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
     position: relative;
@@ -121,22 +137,35 @@ nav ul a::after {
 
 /* Hover effect */
 nav ul a:hover {
-    color: #ff5733; /* Change text color on hover */
-    transform: translateY(-2px); /* Slight upward movement */
+    color: #ff5733;
+    /* Change text color on hover */
+    transform: translateY(-2px);
+    /* Slight upward movement */
 }
 
 nav ul a:hover::after {
-    transform: scaleX(1); /* Animate the underline */
+    transform: scaleX(1);
+    /* Animate the underline */
 }
 
 /* Click effect */
 nav ul a:active {
     color: #d43f00;
-    transform: scale(0.95); /* Slight shrink effect when clicked */
+    transform: scale(0.95);
+    /* Slight shrink effect when clicked */
 }
 
+nav ul li a.active {
+    color: #ff5733; /* Highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid #ff5733;
+}
+
+
 section {
-    padding: 20px;
+    /* padding: 20px; */
+    background: transparent;
+
 }
 
 @media (max-width: 768px) {
@@ -157,6 +186,8 @@ section {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    /* margin-bottom: 80px; */
+
 }
 
 @media (max-width: 768px) {
@@ -167,7 +198,7 @@ section {
 }
 
 #hero h2 {
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
@@ -179,8 +210,8 @@ section {
 }
 
 #hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
+    font-size: 1.5rem;
+    /* max-width: 600px; */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -190,24 +221,344 @@ section {
     }
 }
 
+#about,
+#innovator {
+    height: 600px;
+    padding: 50px 20px 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbdde077;
+    /* background-color: #f8f8f8; */
+    /* border: 1px solid #d43f00; */
+}
 
-#contact {
-    margin-bottom: 50px;
+.about,
+.innovator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #c6d400; */
+}
 
+
+.image-container {
+    flex: 1;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #00cdd4; */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    flex: 1;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    /* Other sections keep their normal flex behavior */
+    .about,
+    .innovator {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .image-container,
+    .text-content {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-content {
+        padding: 20px 10px;
+        text-align: center;
     }
 }
 
+
+#services {
+    height: 80vh;
+
+}
+
+#services h2 {
+    margin-top: 100px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+
+.services-para  {
+    margin-top: 10px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333; /* Keeps it readable */
+    font-size: 1.8rem;
+}
+
+.services-image-container { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: stretch; /* Ensures all items stretch to the same height */
+    padding: 20px;
+    /* border: 1px solid #00cdd4; */
+}
+
+.services-image-container > * {
+    background: white; /* Ensures a clean pop-out effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.06); /* Soft shadow effect */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.services-image-container > *:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 
+                0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.services-divs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.services-divs img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%; /* Set a fixed height to maintain consistency */
+    object-fit: contain;
+}
+
+
+.services-divs p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #services h2 {
+        margin-top: 10px;
+        /* font-family: 'Montserrat', sans-serif; */
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+    
+    
+    .services-para  {
+        margin-top: 10px;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #333; /* Keeps it readable */
+        font-size: 0.9rem;
+    }
+    
+
+    .services-image-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        padding-bottom: 30px; /* Adds spacing before the next section */    
+    }
+
+    .services-divs img {
+        width: 80%;
+        max-width: 120px;
+        height: 80px; /* Maintain aspect ratio while keeping sizes consistent */
+    }
+
+    .services-divs p {
+        margin-top: 10px;
+        font-size: 1.0rem;
+    }
+
+    .services-image-container > * {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08), 
+                    0 1px 2px rgba(0, 0, 0, 0.05); /* Softer shadow on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-image-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        
+    }
+
+    .services-divs img {
+        width: 70%;
+        max-width: 100px;
+        height: 70px;
+    }
+
+    .services-image-container > * {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07), 
+                    0 1px 2px rgba(0, 0, 0, 0.04); /* Even softer shadow on smallest screens */
+        border-radius: 6px; /* Slightly smaller border-radius for compact look */
+    }
+}
+
+
+#affiliations {
+
+    height: 70vh;
+}
+
+
+#affiliations h2 {
+    margin-top: 100px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+
+.aff-para  {
+    margin-top: 10px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333; /* Keeps it readable */
+    font-size: 1.8rem;
+}
+
+.affiliations-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: stretch; /* Ensures all items stretch to the same height */
+    padding: 20px;
+    /* border: 1px solid #00cdd4; */
+}
+
+.aff-divs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.aff-divs img {
+    width: 100%;
+    max-width: 150px;
+    height: 100px; /* Set a fixed height to maintain consistency */
+    object-fit: contain;
+}
+
+
+.aff-divs p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .affiliations {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #affiliations h2 {
+        margin-top: 10px;
+        /* font-family: 'Montserrat', sans-serif; */
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    .aff-para  {
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #333; /* Keeps it readable */
+        font-size: 0.9rem;
+    }
+
+    .affiliations-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .aff-divs img {
+        width: 80%;
+        max-width: 120px;
+        height: 80px; /* Maintain aspect ratio while keeping sizes consistent */
+    }
+
+    .aff-divs p {
+        margin-top: 10px;
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .affiliations-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    .aff-divs img {
+        width: 70%;
+        max-width: 100px;
+        height: 70px;
+    }
+}
+
+
+
 footer {
-    background: #333;
+    /* background: #333; */
+    background: #3e6606;
     color: white;
     padding: 20px 10px;
     text-align: center;
+    /* border: 1px solid #d43f00; */
 }
 
 .footer-container {
@@ -217,6 +568,7 @@ footer {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    /* border: 1px solid #d43f00; */
 }
 
 .footer-section {
@@ -224,6 +576,13 @@ footer {
     min-width: 200px;
     margin: 10px;
     padding: 10px;
+}
+
+.footer-section img {
+    width: 80%;
+    height: 80%;
+    /* object-fit: cover; */
+
 }
 
 /* .footer-section-about {
@@ -238,7 +597,9 @@ footer {
 
 .footer-section h4 {
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a18;
 }
 
 .footer-section ul {
@@ -252,6 +613,8 @@ footer {
 
 .footer-section ul a {
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -260,6 +623,15 @@ footer {
     color: #ffcc00;
 }
 
+
+.footer-section p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+
+}
+
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -267,8 +639,8 @@ footer {
 }
 
 .social-icons img {
-    width: 100px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -278,7 +650,8 @@ footer {
 
 .copyright {
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* Responsive Design */
@@ -289,9 +662,33 @@ footer {
         text-align: center;
     }
 
+    .footer-section ul a {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-section p {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+    
+    }
+
     .footer-section {
         min-width: 100%;
         margin: 10px 0;
+    }
+
+    .footer-section img {
+        width: 100px;
+        height: 100px;
+        /* object-fit: cover; */
+    
     }
 
     .social-icons {
@@ -301,5 +698,11 @@ footer {
     .social-icons img {
         width: 28px;
         height: 28px;
+    }
+
+    .copyright {
+        margin-top: 20px;
+        font-size: 0.8rem;
+        font-weight: 400;
     }
 }
