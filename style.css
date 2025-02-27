@@ -1,8 +1,8 @@
 html {
-    background-color: #dbdde077;
+    /* background-color: #dbdde077; */
     min-height: 100vh;
     scroll-behavior: smooth;
-    
+
 }
 
 
@@ -11,7 +11,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #dbdde077;
 
 }
 
@@ -156,7 +155,8 @@ nav ul a:active {
 }
 
 nav ul li a.active {
-    color: #ff5733; /* Highlight color */
+    color: #ff5733;
+    /* Highlight color */
     font-weight: bold;
     border-bottom: 2px solid #ff5733;
 }
@@ -198,9 +198,9 @@ section {
 }
 
 #hero h2 {
-    font-size: 3.0rem;
+    font-size: 3.3rem;
     font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 2px 10px rgba(73, 71, 71, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -210,7 +210,7 @@ section {
 }
 
 #hero p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     /* max-width: 600px; */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
@@ -252,7 +252,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #00cdd4; */
+    border-bottom: 5px solid #ffcc00;  /* Top border */
+    border-right: 4px solid #ffcc00; /* Right border */
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 205, 212, 0.5);
 }
 
 .image-container img {
@@ -266,19 +269,44 @@ section {
     width: 50%;
     padding: 20px;
     text-align: center;
+    position: relative;
+    /* border-bottom: 3px solid #3e6606; */
+    
+}
+
+
+.text-content::after {
+    content: "";
+    display: block;
+    width: 50%; /* Adjust this to control the length of the border */
+    height: 3px;
+    background-color: #3e6606;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .text-content h2 {
-    font-size: 2rem;
+    color: #3e6606;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .text-content p {
+    font-family: 'Libre Baskerville', serif;
     font-size: 1.2rem;
+    font-weight: 500;
     line-height: 1.5;
+    color: #333;
+    text-align: left;
+    justify-self: end;
 }
 
 @media (max-width: 768px) {
+
     /* Other sections keep their normal flex behavior */
     .about,
     .innovator {
@@ -294,16 +322,37 @@ section {
         height: auto;
     }
 
-    .text-content {
-        padding: 20px 10px;
-        text-align: center;
+    .text-content h2 {
+        color: #3e6606;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
     }
+    
+    .text-content p {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 0.72rem;
+        line-height: 1.5;
+        color: #333;
+        text-align: justify;
+    }
+
+    .text-content::after {
+        display: none;
+    }
+    
 }
 
 
 #services {
     height: 80vh;
-
+    /* background: linear-gradient(rgba(126, 125, 125, 0.5), rgba(66, 65, 65, 0.5)), url('./assets/images/background-6.png') no-repeat center center/cover; */
+    /* background-image: url('./assets/images/background-5.png');  */
+    /* background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;  */
+    /* background-color: #8cb159; */
 }
 
 #services h2 {
@@ -315,38 +364,45 @@ section {
 }
 
 
-.services-para  {
+.services-para {
     margin-top: 10px;
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #333; /* Keeps it readable */
+    color: #333;
+    /* Keeps it readable */
     font-size: 1.8rem;
 }
 
-.services-image-container { 
+.services-image-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-items: center;
-    align-items: stretch; /* Ensures all items stretch to the same height */
+    align-items: stretch;
+    /* Ensures all items stretch to the same height */
     padding: 20px;
+    margin-top: 80px;
     /* border: 1px solid #00cdd4; */
 }
 
-.services-image-container > * {
-    background: white; /* Ensures a clean pop-out effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
-                0 1px 3px rgba(0, 0, 0, 0.06); /* Soft shadow effect */
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
+.services-image-container>* {
+    background: transparent;
+    /* Ensures a clean pop-out effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.06);
+    /* Soft shadow effect */
+    border-radius: 8px;
+    /* Slightly rounded corners for a modern look */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.services-image-container > *:hover {
-    transform: translateY(-3px); /* Slight lift on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 
-                0 2px 4px rgba(0, 0, 0, 0.1);
+.services-image-container>*:hover {
+    transform: translateY(-3px);
+    /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15),
+        0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .services-divs {
@@ -361,8 +417,9 @@ section {
 
 .services-divs img {
     width: 100%;
-    max-width: 250px;
-    height: 100%; /* Set a fixed height to maintain consistency */
+    max-width: 100px;
+    height: 100%;
+    /* Set a fixed height to maintain consistency */
     object-fit: contain;
 }
 
@@ -371,6 +428,7 @@ section {
     margin-top: 10px;
     font-size: 1.5rem;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .services {
@@ -385,28 +443,31 @@ section {
         font-weight: 700;
         font-size: 1.3rem;
     }
-    
-    
-    .services-para  {
+
+
+    .services-para {
         margin-top: 10px;
         font-family: 'Libre Baskerville', serif;
         font-weight: 400;
         line-height: 1.7;
-        color: #333; /* Keeps it readable */
+        color: #333;
+        /* Keeps it readable */
         font-size: 0.9rem;
     }
-    
+
 
     .services-image-container {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         gap: 10px;
-        padding-bottom: 30px; /* Adds spacing before the next section */    
+        padding-bottom: 30px;
+        /* Adds spacing before the next section */
     }
 
     .services-divs img {
         width: 80%;
         max-width: 120px;
-        height: 80px; /* Maintain aspect ratio while keeping sizes consistent */
+        height: 80px;
+        /* Maintain aspect ratio while keeping sizes consistent */
     }
 
     .services-divs p {
@@ -414,16 +475,17 @@ section {
         font-size: 1.0rem;
     }
 
-    .services-image-container > * {
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08), 
-                    0 1px 2px rgba(0, 0, 0, 0.05); /* Softer shadow on smaller screens */
+    .services-image-container>* {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08),
+            0 1px 2px rgba(0, 0, 0, 0.05);
+        /* Softer shadow on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .services-image-container {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        
+
     }
 
     .services-divs img {
@@ -432,12 +494,15 @@ section {
         height: 70px;
     }
 
-    .services-image-container > * {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07), 
-                    0 1px 2px rgba(0, 0, 0, 0.04); /* Even softer shadow on smallest screens */
-        border-radius: 6px; /* Slightly smaller border-radius for compact look */
+    .services-image-container>* {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07),
+            0 1px 2px rgba(0, 0, 0, 0.04);
+        /* Even softer shadow on smallest screens */
+        border-radius: 6px;
+        /* Slightly smaller border-radius for compact look */
     }
 }
+
 
 
 #affiliations {
@@ -455,12 +520,13 @@ section {
 }
 
 
-.aff-para  {
+.aff-para {
     margin-top: 10px;
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #333; /* Keeps it readable */
+    color: #333;
+    /* Keeps it readable */
     font-size: 1.8rem;
 }
 
@@ -470,7 +536,8 @@ section {
     grid-column-gap: 1px;
     grid-row-gap: 10px;
     justify-items: center;
-    align-items: stretch; /* Ensures all items stretch to the same height */
+    align-items: stretch;
+    /* Ensures all items stretch to the same height */
     padding: 20px;
     /* border: 1px solid #00cdd4; */
 }
@@ -488,7 +555,8 @@ section {
 .aff-divs img {
     width: 100%;
     max-width: 150px;
-    height: 100px; /* Set a fixed height to maintain consistency */
+    height: 100px;
+    /* Set a fixed height to maintain consistency */
     object-fit: contain;
 }
 
@@ -513,11 +581,12 @@ section {
         font-size: 1.3rem;
     }
 
-    .aff-para  {
+    .aff-para {
         font-family: 'Libre Baskerville', serif;
         font-weight: 400;
         line-height: 1.7;
-        color: #333; /* Keeps it readable */
+        color: #333;
+        /* Keeps it readable */
         font-size: 0.9rem;
     }
 
@@ -529,7 +598,8 @@ section {
     .aff-divs img {
         width: 80%;
         max-width: 120px;
-        height: 80px; /* Maintain aspect ratio while keeping sizes consistent */
+        height: 80px;
+        /* Maintain aspect ratio while keeping sizes consistent */
     }
 
     .aff-divs p {
@@ -547,6 +617,330 @@ section {
         width: 70%;
         max-width: 100px;
         height: 70px;
+    }
+}
+
+/* Contact Section Layout */
+.contact-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/background-4.png') no-repeat center center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 30px;
+    background-color: #fff;
+    height: 70vh;
+}
+
+/* Contact Info Side */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 30%;
+    padding: 30px;
+
+    /* background: #f0f0f0; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* border: 1px solid #0056b3; */
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.info-item {
+    margin: 15px 0;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #d6cbcb;
+    /* Keeps it readable */
+    font-size: 1.3rem;
+}
+
+.social-links {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #3e6606;
+    font-weight: bold;
+}
+
+.social-links img {
+    width: 50px;
+    /* Adjust size */
+    height: auto;
+
+}
+
+/* Contact Form Side */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 40%;
+    /* Make it occupy more space */
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    /* Increased shadow for a "lifted" effect */
+}
+
+
+.contact-form h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+
+}
+
+/* Ensure the form fills its container */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Styling for form fields */
+.contact-form label {
+    margin-top: 12px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    /* Added padding for a better feel */
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Button Styling */
+.contact-form button {
+    margin-top: 20px;
+    padding: 15px;
+    width: 50%;
+    align-self: center;
+    background: #3e6606;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background: #a6bd27;
+    transform: translateY(-2px);
+    /* Subtle lift effect */
+}
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 80%;
+    }
+}
+
+/* Tablets & Large Mobile Screens */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+        height: fit-content;
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 40%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 0.3rem;
+    }
+
+    .contact-info h2 {
+        margin-bottom: 10px;
+        color: #ffcc00;
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.0rem;
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+        color: #ffcc00;
+        font-family: 'Fraunces', serif;
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+
+    .info-item {
+        margin: 15px 0;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #d6cbcb;
+        /* Keeps it readable */
+        font-size: 0.7rem;
+    }
+
+    .social-links {
+        margin-top: 15px;
+        font-size: 0.7rem;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #87be2e;
+        font-weight: bold;
+    }
+
+    .social-links img {
+        width: 30px;
+        /* Adjust size */
+        height: auto;
+
+    }
+
+    .contact-form h2 {
+        font-size: 0.5rem;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact-form label {
+        margin-top: 12px;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 300;
+        font-size: 0.5rem;
+        color: #333;
+        text-align: left;
+    }
+
+
+
+    .contact-form button {
+        width: 40%;
+        /* Slightly larger button for touch-friendliness */
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+
+    .contact-info,
+    .contact-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+        /* Slightly smaller font for compact view */
+    }
+
+    .contact-info h2 {
+        margin-bottom: 10px;
+        color: #ffcc00;
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.0rem;
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+        color: #ffcc00;
+        font-family: 'Fraunces', serif;
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+
+    .info-item {
+        margin: 15px 0;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #d6cbcb;
+        /* Keeps it readable */
+        font-size: 0.7rem;
+    }
+
+    .social-links {
+        margin-top: 15px;
+        font-size: 0.7rem;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #87be2e;
+        font-weight: bold;
+    }
+
+    .contact-form h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        padding: 12px;
+        width: 100%;
+        /* Full-width for better accessibility */
+        font-size: 0.95rem;
     }
 }
 
@@ -605,16 +999,19 @@ footer {
 .footer-section ul {
     list-style: none;
     padding: 0;
+    text-align: left;
+    justify-self: center;
 }
 
 .footer-section ul li {
     margin-bottom: 8px;
+
 }
 
 .footer-section ul a {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -626,8 +1023,8 @@ footer {
 
 .footer-section p {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
 
 }
 
@@ -651,7 +1048,7 @@ footer {
 .copyright {
     margin-top: 20px;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* Responsive Design */
@@ -676,7 +1073,7 @@ footer {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: 300;
         font-size: 15px;
-    
+
     }
 
     .footer-section {
@@ -688,7 +1085,7 @@ footer {
         width: 100px;
         height: 100px;
         /* object-fit: cover; */
-    
+
     }
 
     .social-icons {
@@ -704,5 +1101,49 @@ footer {
         margin-top: 20px;
         font-size: 0.8rem;
         font-weight: 400;
+    }
+}
+
+#scrollUpBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #182407; /* Match your theme */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.2s ease-in-out;
+}
+
+#scrollUpBtn:hover {
+    background-color: #2a4604; /* Darker shade for hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+#scrollUpBtn.show {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    #scrollUpBtn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollUpBtn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        bottom: 15px;
+        right: 15px;
     }
 }

@@ -49,3 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", highlightNav);
 });
+
+
+window.onscroll = function () {
+    let btn = document.getElementById("scrollUpBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.classList.add("show");
+    } else {
+        btn.classList.remove("show");
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
