@@ -16,12 +16,13 @@ body {
 
 header {
     text-align: center;
-    padding: 15px 30px 20px 30px;
+    padding: 10px 50px 10px 100px;
     /* top right bottom left */
     background: #ffcc00;
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 @media (max-width: 768px) {
@@ -47,13 +48,25 @@ header h1 {
 
 .logo {
     max-width: 120px;
-    height: auto;
+    height: 80px;
+    display: block;
+    image-rendering: crisp-edges;
+    object-fit: contain;
 }
 
 /* Adjust logo size on smaller screens */
 @media (max-width: 768px) {
+
+
+    .header {
+        padding: 0px 0px 0px 10px;
+
+    }
+
     .logo {
-        max-width: 80px;
+        max-width: 140px;
+        height: 50px;
+        display: block;
     }
 }
 
@@ -111,10 +124,10 @@ nav ul a {
     text-decoration: none;
     /* color: #333; */
     color: #3e6606;
-    font-weight: 900;
+    font-weight: 700;
     /* Made the font bolder */
-    font-size: large;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
     position: relative;
     padding: 5px 10px;
@@ -296,10 +309,10 @@ section {
 }
 
 .text-content p {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.9;
     color: #333;
     text-align: left;
     justify-self: end;
@@ -390,8 +403,8 @@ section {
 .services-image-container>* {
     background: transparent;
     /* Ensures a clean pop-out effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-        0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 
+            0 0 8px rgba(98, 104, 44, 0.507);
     /* Soft shadow effect */
     border-radius: 8px;
     /* Slightly rounded corners for a modern look */
@@ -568,9 +581,10 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .affiliations {
+    #affiliations {
         flex-direction: column;
         text-align: center;
+        height: fit-content;
     }
 
     #affiliations h2 {
@@ -591,8 +605,10 @@ section {
     }
 
     .affiliations-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: fit-content;
     }
 
     .aff-divs img {
@@ -602,15 +618,28 @@ section {
         /* Maintain aspect ratio while keeping sizes consistent */
     }
 
+
     .aff-divs p {
         margin-top: 10px;
-        font-size: 1.0rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 0.8;
     }
 }
 
 @media (max-width: 480px) {
+
+    #affiliations {
+        flex-direction: column;
+        text-align: center;
+        height: fit-content;
+    }
+
     .affiliations-container {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: fit-content;
     }
 
     .aff-divs img {
@@ -699,7 +728,7 @@ section {
     max-width: 40%;
     /* Make it occupy more space */
     padding: 30px;
-    background: #fff;
+    background: #ffffffee;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     /* Increased shadow for a "lifted" effect */
@@ -1058,6 +1087,15 @@ footer {
         align-items: center;
         text-align: center;
     }
+
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        justify-self: center;
+    }
+    
 
     .footer-section ul a {
         color: white;
