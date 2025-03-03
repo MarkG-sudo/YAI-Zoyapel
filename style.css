@@ -265,16 +265,16 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 5px solid #ffcc00;  /* Top border */
-    border-right: 4px solid #ffcc00; /* Right border */
-    border-bottom-right-radius: 10px;
+    border: 5px solid #ffcc00;  
+    border-radius: 33px;
     box-shadow: 5px 5px 15px rgba(0, 205, 212, 0.5);
 }
 
 .image-container img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 30px;
 }
 
 .text-content {
@@ -732,14 +732,14 @@ section {
 
 /* Contact Section Layout */
 .contact-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/background-4.png') no-repeat center center/cover;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/background-4.png') no-repeat center center/cover; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 20px 20px;
     gap: 30px;
-    background-color: #fff;
+    background-color: #002D26;
     height: 70vh;
 }
 
