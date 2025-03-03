@@ -31,12 +31,12 @@ header {
     }
 }
 
-header h1 {
+/* header h1 {
     margin: 0;
     padding: 0;
-    font-size: 20px;
-    /* Adjust font size if necessary */
-}
+    font-size: 15px;
+   
+} */
 
 .nav-container {
     display: flex;
@@ -47,8 +47,8 @@ header h1 {
 }
 
 .logo {
-    max-width: 120px;
-    height: 80px;
+    max-width: 80px;
+    height: 60px;
     display: block;
     image-rendering: crisp-edges;
     object-fit: contain;
@@ -126,7 +126,7 @@ nav ul a {
     color: #3e6606;
     font-weight: 700;
     /* Made the font bolder */
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     font-family: 'Nunito', sans-serif;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
     position: relative;
@@ -211,7 +211,7 @@ section {
 }
 
 #hero h2 {
-    font-size: 3.3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 3px 2px 10px rgba(73, 71, 71, 0.5);
 }
@@ -223,7 +223,7 @@ section {
 }
 
 #hero p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     /* max-width: 600px; */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
@@ -261,7 +261,7 @@ section {
 .image-container {
     flex: 1;
     width: 80%;
-    height: 100%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,8 +272,8 @@ section {
 }
 
 .image-container img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
 }
 
@@ -304,15 +304,15 @@ section {
     color: #3e6606;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .text-content p {
     font-family: 'Nunito', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    line-height: 1.9;
+    line-height: 1.3;
     color: #333;
     text-align: left;
     justify-self: end;
@@ -373,7 +373,7 @@ section {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    font-size: 2.6rem;
+    font-size: 2.0rem;
 }
 
 
@@ -384,7 +384,7 @@ section {
     line-height: 1.7;
     color: #333;
     /* Keeps it readable */
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 .services-image-container {
@@ -439,7 +439,7 @@ section {
 
 .services-divs p {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
 }
 
 /* Responsive Design */
@@ -486,6 +486,7 @@ section {
     .services-divs p {
         margin-top: 10px;
         font-size: 1.0rem;
+        /* line-height: 1.5; */
     }
 
     .services-image-container>* {
@@ -529,7 +530,7 @@ section {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    font-size: 2.6rem;
+    font-size: 2.0rem;
 }
 
 
@@ -540,7 +541,7 @@ section {
     line-height: 1.7;
     color: #333;
     /* Keeps it readable */
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 .affiliations-container {
@@ -576,7 +577,8 @@ section {
 
 .aff-divs p {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+    line-height: 1.5;
 }
 
 /* Responsive Design */
@@ -621,9 +623,9 @@ section {
 
     .aff-divs p {
         margin-top: 10px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 400;
-        line-height: 0.8;
+        line-height: 1.5;
     }
 }
 
@@ -680,22 +682,22 @@ section {
     color: #ffcc00;
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .contact-info p {
     margin-bottom: 10px;
-    color: #ffcc00;
+    color: #be9b0b;
     font-family: 'Fraunces', serif;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .info-item {
     margin: 15px 0;
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.2;
     color: #d6cbcb;
     /* Keeps it readable */
     font-size: 1.3rem;
@@ -715,7 +717,7 @@ section {
 }
 
 .social-links img {
-    width: 50px;
+    width: 40px;
     /* Adjust size */
     height: auto;
 
@@ -725,7 +727,7 @@ section {
 .contact-form {
     flex: 1;
     min-width: 300px;
-    max-width: 40%;
+    max-width: 35%;
     /* Make it occupy more space */
     padding: 30px;
     background: #ffffffee;
@@ -740,7 +742,7 @@ section {
     color: #333;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 
 }
 
@@ -756,7 +758,7 @@ section {
     margin-top: 12px;
     font-family: 'Libre Baskerville', serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #333;
     text-align: left;
 }
@@ -764,7 +766,7 @@ section {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     /* Added padding for a better feel */
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -776,14 +778,14 @@ section {
 /* Button Styling */
 .contact-form button {
     margin-top: 20px;
-    padding: 15px;
+    padding: 8px;
     width: 50%;
     align-self: center;
     background: #3e6606;
     color: #fff;
     border: none;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
@@ -1002,8 +1004,8 @@ footer {
 }
 
 .footer-section img {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 40%;
     /* object-fit: cover; */
 
 }
@@ -1020,7 +1022,7 @@ footer {
 
 .footer-section h4 {
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
     color: #1a1a18;
 }
@@ -1028,7 +1030,7 @@ footer {
 .footer-section ul {
     list-style: none;
     padding: 0;
-    text-align: left;
+    /* text-align: left; */
     justify-self: center;
 }
 
@@ -1065,8 +1067,8 @@ footer {
 }
 
 .social-icons img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -1076,7 +1078,7 @@ footer {
 
 .copyright {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 500;
 }
 
