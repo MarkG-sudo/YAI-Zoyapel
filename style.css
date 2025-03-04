@@ -192,28 +192,28 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 10%;
+    padding: 60px 5%;
     background: #002D26;
     min-height: 80vh;
 }
 
 /* Text Content */
 .hero-content {
-    max-width: 550px;
+    max-width: 500px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Nunito', sans-serif;
     margin-bottom: 15px;
     color: white;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 15px;
     /* font-weight: 600; */
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 25px;
     /* color: #FFCC00; */
     color: #87d31c;;
@@ -232,14 +232,10 @@ span {
 
 }
 
-/* .hero-buttons a {
+.hero-buttons a {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 6px;
-    transition: background 0.3s ease-in-out;
-} */
+    
+}
 
 .btn-green {
     background: #3E6606;
@@ -265,9 +261,10 @@ span {
 
 /* Image Section */
 .hero-images {
+    width: 50%;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-end;
     padding-top: 50px;
 }
@@ -280,8 +277,8 @@ span {
 
 /* Main Image Styling */
 .main-img {
-    width: 320px;
-    height: 300px;
+    width: 280px;
+    height: 250px;
     box-shadow: 0px 4px 8px rgba(155, 197, 39, 0.2);
     border-left: 5px solid #ffaa00;
     border-top: 5px solid #ffaa00;
@@ -297,16 +294,16 @@ span {
 /* Secondary Image Styling */
 .secondary-img {
     border-bottom: 5px solid #ffaa00;
-    width: 350px;
+    width: 300px;
     height: 250px;
     border-radius: 12px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 70% 100%, 0% 100%);
     position: absolute;
-    bottom: 10px;
+    bottom: 60px;
     /* Move it lower */
     right: 10px;
     /* Adjust as needed */
-    z-index: 3;
+    z-index: 1;
     /* Brings it on top of the main image */
 }
 
@@ -324,17 +321,18 @@ span {
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 22px;
         font-family: 'Nunito', sans-serif;
-        margin-bottom: 10px;
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 
     .hero p {
-        font-size: 14px;
+        font-size: 12px;
         font-family: 'Poppins', sans-serif;
         line-height: 1.6;
         margin-bottom: 25px;
-        color: #FFCC00;
+        color: #87d31c;
     }
 
     .hero-buttons {
@@ -350,17 +348,18 @@ span {
         border: none;
         font-size: 12px;
         font-weight: bold;
-        padding: 12px 10px;
+        padding: 12px 15px;
+        margin-top: 40px;
 
     }
 
-    .btn-white {
+    /* .btn-white {
         border: none;
         font-size: 12px;
         font-weight: bold;
         padding: 12px 10px;
 
-    }
+    } */
 
     .main-img {
         display: none
@@ -500,12 +499,14 @@ span {
         font-size: 0.9rem;
         line-height: 1.5;
         color: #333;
-        text-align: justify;
+        text-align: left;
     }
 
     .text-content::after {
         display: none;
     }
+
+    
 
 }
 
@@ -742,9 +743,18 @@ span {
 
 /* 🔽 Mobile View */
 @media (max-width: 768px) {
+
+    #testimonials {
+        min-height: 500px;
+        
+    }
+
+
     .testimonial-container {
         flex-direction: column;
         width: 80%;
+        margin-top: 50px;
+        
     }
 
     /* Hide arrows on mobile */
