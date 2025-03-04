@@ -252,8 +252,9 @@ section {
     align-items: center;
     justify-content: space-between;
     max-width: 1600px;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    gap: 40px;
     /* border: 1px solid #c6d400; */
 }
 
@@ -265,8 +266,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px solid #ffcc00;  
-    border-radius: 33px;
+    /* border: 5px solid #ffcc00;   */
+    border-radius: 23px;
     box-shadow: 5px 5px 15px rgba(0, 205, 212, 0.5);
 }
 
@@ -325,7 +326,8 @@ section {
     .innovator {
         flex-direction: column;
         text-align: center;
-        margin-top: 60px;
+        margin-top: 40px;
+        height: max-content;
     }
 
     .image-container,
