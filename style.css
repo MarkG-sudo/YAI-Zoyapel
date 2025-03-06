@@ -18,7 +18,7 @@ header {
     text-align: center;
     padding: 10px 50px 0px 80px;
     /* top right bottom left */
-    background: #209e31;
+    background: #32743c;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -124,8 +124,8 @@ nav ul li:not(#contact-btn) {
 nav ul a:not(#contact-btn) {
     text-decoration: none;
     /* color: #333; */
-    color: #1a1616;
-    font-weight: 550;
+    color: #ffffff;
+    font-weight: 500;
     /* Made the font bolder */
     font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
@@ -176,13 +176,13 @@ nav ul li a.active {
 }
 
 #contact-btn {
-    border-radius: 20px; 
+    border-radius: 20px;
     /* border: 1px solid rgb(112, 175, 30); */
-    
+
 }
 
 #contact-btn a {
-    text-decoration: none; 
+    text-decoration: none;
     padding: 5px 15px;
 }
 
@@ -240,10 +240,13 @@ section {
     margin-bottom: 25px;
     /* color: #FFCC00; */
     color: #ffffff;
-    max-width: 600px;  /* Set max width */
-    width: 70%;  /* Optional: Adjust width responsiveness */
-    margin-left: 0;  /* Align to left */
-    
+    max-width: 600px;
+    /* Set max width */
+    width: 70%;
+    /* Optional: Adjust width responsiveness */
+    margin-left: 0;
+    /* Align to left */
+
 }
 
 span {
@@ -261,7 +264,7 @@ span {
 
 .hero-buttons a {
     text-decoration: none;
-    
+
 }
 
 .btn-green {
@@ -281,7 +284,7 @@ span {
     width: 50%;
     height: 100%;
     border: 2px solid red;
-    
+
 }
 
 
@@ -296,9 +299,9 @@ span {
 
     .hero-content {
         /* max-width: 90%; */
-       justify-self: left;
-       padding-top: 80px;
-       margin-right: 150px;
+        justify-self: left;
+        padding-top: 80px;
+        margin-right: 150px;
     }
 
     .hero h1 {
@@ -313,7 +316,10 @@ span {
         font-size: 15px;
         font-family: 'Poppins', sans-serif;
         line-height: 1.6;
-        color: #87d31c;
+        color: #ffffff;
+        max-width: 700px;
+        /* Set max width */
+        width: 100%;
     }
 
     .hero-buttons {
@@ -321,7 +327,7 @@ span {
         margin-bottom: 20px;
     }
 
-   
+
 
     .btn-green {
         border: none;
@@ -344,7 +350,7 @@ span {
         display: none
     }
 
- 
+
 }
 
 
@@ -384,7 +390,7 @@ span {
     border-radius: 23px;
     /* box-shadow: 5px 5px 15px rgba(0, 205, 212, 0.5); */
     padding-top: 50px;
-    
+
 }
 
 .image-container img {
@@ -392,7 +398,7 @@ span {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    
+
 }
 
 .text-content {
@@ -440,16 +446,17 @@ span {
 @media (max-width: 768px) {
 
     #about,
-#innovator {
-    height: fit-content;
-    padding: 20px 20px 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #dbdde077;
-    /* background-color: #f8f8f8; */
-    /* border: 1px solid #d43f00; */
-}
+    #innovator {
+        height: fit-content;
+        padding: 20px 20px 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #dbdde077;
+        /* background-color: #f8f8f8; */
+        /* border: 1px solid #d43f00; */
+    }
+
     /* Other sections keep their normal flex behavior */
     .about,
     .innovator {
@@ -470,9 +477,9 @@ span {
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
-        
+
     }
-    
+
 
     .text-content {
         width: 100%;
@@ -485,7 +492,7 @@ span {
         font-family: 'Libre Baskerville', serif;
         font-weight: 700;
         font-size: 1.2rem;
-        
+
     }
 
     .text-content p {
@@ -500,7 +507,7 @@ span {
         display: none;
     }
 
-    
+
 
 }
 
@@ -620,8 +627,9 @@ span {
     margin-top: 40px;
     font-size: 1.8rem;
     font-family: 'Libre Baskerville', serif;
-    
+
 }
+
 .product-card {
     background: white;
     padding: 20px;
@@ -801,7 +809,7 @@ span {
 
     #testimonials {
         min-height: 500px;
-        
+
     }
 
 
@@ -809,10 +817,10 @@ span {
         flex-direction: column;
         width: 80%;
         margin-top: 50px;
-        
+
     }
 
-    .testimonial-content{
+    .testimonial-content {
         min-height: 280px;
         max-width: 400px;
 
@@ -1154,7 +1162,7 @@ span {
 
 footer {
     /* background: #333; */
-    background: #209e31;
+    background: #32743c;
     color: white;
     padding: 20px 10px;
     text-align: center;
@@ -1199,7 +1207,7 @@ footer {
     margin-bottom: 10px;
     font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
-    color: #1a1a18;
+    color: #ffffff;
 }
 
 .footer-section ul {
