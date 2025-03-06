@@ -233,19 +233,16 @@ section {
 
 .hero p {
     font-size: 1.3rem;
-    /* font-weight: 600; */
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     text-align: left;
     margin-bottom: 25px;
-    /* color: #FFCC00; */
     color: #ffffff;
     max-width: 600px;
-    /* Set max width */
-    width: 70%;
-    /* Optional: Adjust width responsiveness */
+    width: 80%;
     margin-left: 0;
-    /* Align to left */
+    text-shadow: 0px 0px 15px #000000;    
 
 }
 
@@ -268,7 +265,7 @@ span {
 }
 
 .btn-green {
-    background: #ffffff;
+    background: #8dca3c;
     color: rgb(0, 0, 0);
     border: none;
     font-size: 16px;
@@ -279,13 +276,6 @@ span {
 }
 
 
-/* Image Section */
-.hero-images {
-    width: 50%;
-    height: 100%;
-    border: 2px solid red;
-
-}
 
 
 
@@ -320,6 +310,7 @@ span {
         max-width: 700px;
         /* Set max width */
         width: 100%;
+        text-shadow: 0px 0px 15px #000000; 
     }
 
     .hero-buttons {
@@ -488,7 +479,7 @@ span {
     }
 
     .text-content h2 {
-        color: #3e6606;
+        color: #000000;
         font-family: 'Libre Baskerville', serif;
         font-weight: 700;
         font-size: 1.2rem;
@@ -516,7 +507,7 @@ span {
     height: 70vh;
     text-align: center;
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: #EEEFF1;
     /* Keep it clean */
 }
 
@@ -614,32 +605,38 @@ span {
     }
 }
 
-
+/* product section  */
+#product-showcase{
+    background-color: #ffffff;
+    height: 100vh;
+}
 .product-showcase {
     display: flex;
     gap: 50px;
-    height: 70vh;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
+    
 }
 
 #product-showcase h2 {
-    margin-top: 40px;
-    font-size: 1.8rem;
+    margin-top: 10px;
+    padding-top: 80px;
+    font-size: 2.0rem;
     font-family: 'Libre Baskerville', serif;
 
 }
 
 .product-card {
-    background: white;
-    padding: 20px;
+    background: transparent;
+    /* padding: 20px; */
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 400px;
     text-align: center;
     width: 100%;
-    margin-bottom: 50px;
+    
 }
 
 .product-card img {
@@ -649,28 +646,43 @@ span {
 
 .product-card h3 {
     margin: 15px 0 10px;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .product-card p {
-    color: #555;
+    color: #1b1b1b;
     font-size: 14px;
+    
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.product-card img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    #product-showcase{        
+        height: fit-content;
+    }
+
     .product-showcase {
         flex-direction: column;
-        height: auto;
         padding: 20px;
     }
 
+    #product-showcase h2 {
+        font-size: 1.3rem;
+        font-family: 'Libre Baskerville', serif;
+        margin-top: 0px;
+        padding-top: 20px;
+    
+    }
+
     .product-card {
-        max-width: 90%;
+        /* max-width: 90%; */
     }
 }
 
@@ -687,9 +699,10 @@ span {
 
 #testimonials h2 {
     font-family: 'Libre Baskerville', serif;
-    font-size: 28px;
+    font-size: 2.0rem;
     margin-bottom: 60px;
     color: #000;
+    text-shadow: 0px 0px 3px #ffffff;  
 }
 
 /* 🔹 Carousel Container */
@@ -818,6 +831,13 @@ span {
         width: 80%;
         margin-top: 50px;
 
+    }
+
+    #testimonials h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.3rem;
+        margin-bottom: 60px;
+     
     }
 
     .testimonial-content {
@@ -1207,7 +1227,7 @@ footer {
     margin-bottom: 10px;
     font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
+    color: #000000;
 }
 
 .footer-section ul {
@@ -1223,9 +1243,9 @@ footer {
 }
 
 .footer-section ul a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -1236,9 +1256,9 @@ footer {
 
 
 .footer-section p {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
