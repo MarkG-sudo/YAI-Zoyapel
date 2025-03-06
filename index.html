@@ -19,16 +19,17 @@
 <body>
     <header>
         <div class="nav-container">
-            <img src="./assets/images/Logo-zoyapel.png" alt="Company Logo" class="logo">
+            <img src="./assets/images/Zoyapel_2nd_logo.png" alt="Company Logo" class="logo">
             <button class="menu-toggle">&#9776;</button> <!-- Hamburger Icon -->
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Products</a></li>
                     <li><a href="#innovator">Innovator</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li id="contact-btn"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
         </div>
         <!-- <h1>Pineapple By-Product Innovation</h1> -->
     </header>
@@ -36,34 +37,37 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Your No1 Eco-friendly Mosquito Repellent - <span>Zoyapel</span> </h1>
-            <p>Made from natural ingredients, providing safe and <br> long-lasting protection. Our
-                mission is to offer non-toxic, affordable, and
-                effective mosquito repellents, especially for low-
-                income communities.</p>
+            <h1>Your No1 Eco-friendly Mosquito Repellent </h1>
+            <p> Safe for the skin, affordable, and long-lasting particularly for low-income communities</p>
             <div class="hero-buttons">
                 <a href="#about" class="btn-green">Learn More</a>
                 <!-- <a href="#about" class="btn-white">Learn More</a> -->
-                
+
             </div>
         </div>
-        <div class="hero-images">
+        <!-- <div class="hero-images">
             <img src="./assets/images/hero-img.webp" alt="Farmer" class="main-img">
-            <img src="./assets/images/innovator.webp" alt="Corn" class="secondary-img">
-        </div>
+    
+        </div> -->
     </section>
 
     <section id="about">
         <div class="about">
             <div class="image-container">
-                <img src="./assets/images/pills-dark-environment.webp" alt="Pills in dark environment">
+                <img src="./assets/images/product-about.webp" alt="Pills in dark environment">
             </div>
             <div class="text-content">
-                <h2>About the Product</h2>
-                <p>Zoyapel is a natural supplement harnessing the power of bromelain, an enzyme extracted from pineapple
-                    stems to reduce pain and swelling. Every year, countless tons of pineapple stems are discarded after
-                    fruit processing. Yet, within this waste lies bromelain—an enzyme celebrated for its
-                    anti-inflammatory, pain-relieving, and digestive benefits </p>
+                <h2>About Zoyapel</h2>
+                <p>ZoyaPel Limited produces eco-friendly mosquito
+                    repellents made from natural ingredients,
+                    providing safe and long-lasting protection.<br><br> Our
+                    mission is to offer non-toxic, affordable, and
+                    effective mosquito repellents, especially for low-
+                    income communities, to ensure safe protection
+                    for all.Our vision is to become a leading brand in
+                    sustainable mosquito protection, reducing
+                    reliance on harmful chemical repellents while
+                    improving public health </p>
 
                 <p>Our advanced process extracts and refines bromelain to create Zoyapel, transforming a once-overlooked
                     by-product into a premium ingredient for the pharmaceutical, nutraceutical, and cosmetics
@@ -79,17 +83,75 @@
         </p>
         <div class="services">
             <div class="services-image-container">
-                <div class="services-divs"><img src="./assets/images/quality-svgrepo-com.svg" alt="product">
-                    <p>Crafted with precision, ensuring the purest bromelain extract for optimal benefits. </p>
+                <div class="services-divs"><img src="./assets/images/avatar-human-person-svgrepo-com.svg" alt="product">
+                    <p>Formulated with care, delivering a pure product, gentle and safe on skin. </p>
                 </div>
-                <div class="services-divs"><img src="./assets/images/molecular-structure-svgrepo-com (1).svg"
-                        alt="product">
-                    <p>Harnessing the power of bromelain, a proven natural enzyme for wellness. </p>
+                <div class="services-divs"><img src="./assets/images/clock-svgrepo-com.svg" alt="product">
+                    <p>Expertly crafted providing a high-quality product that lasts longer and offers great value. </p>
                 </div>
                 <div class="services-divs"><img src="./assets/images/verified-svgrepo-com.svg" alt="product">
                     <p>Rigorously tested and verified to meet industry standards for safety and effectiveness. </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <section id="product-showcase">
+        <h2>Meet Our Products</h2>
+        <div class="product-showcase">
+            <div class="product-card">
+                <img src="./assets/images/soap.webp" alt="Product 1">
+                <h3>Zoyapel Soap</h3>
+                <p>Brief description of the product highlighting its key benefits.</p>
+            </div>
+            <div class="product-card">
+                <img src="./assets/images/spray.webp" alt="Product 2">
+                <h3>Zoyapel Repellent</h3>
+                <p>Another brief description showcasing the value of this product.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Customer Stories</h2>
+        <div class="testimonial-container">
+            <button id="prevBtn" class="nav-btn">&lt;</button>
+            <div class="testimonial-content">
+                <div class="testimonial-track">
+                    <div class="testimonial-card active">
+                        <p class="testimonial-text">"As a mother, my priority is keeping my children safe. ZoyaPel's
+                            natural mosquito repellent gives me peace of mind—no harsh chemicals, just effective
+                            protection for my family. I love that it aligns with my eco-conscious lifestyle!"</p>
+                        <div class="testimonial-footer">
+                            <img src="./assets/images/figurehead-1.jpg" alt="John Doe" class="testimonial-img">
+                            <span class="testimonial-name">Mensah</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Living in a rural area, finding affordable mosquito protection is a
+                            challenge. ZoyaPel offers an effective solution that fits my budget and keeps my family
+                            safe. It’s a game-changer for communities like mine!"
+                        </p>
+                        <div class="testimonial-footer">
+                            <img src="./assets/images/figurehead-3.jpg" alt="Abdul Raman" class="testimonial-img">
+                            <span class="testimonial-name">Abdul Raman</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I always choose natural products to maintain a healthy lifestyle.
+                            ZoyaPel provides powerful protection without harmful chemicals. It’s my go-to repellent, and
+                            I recommend it to my patients and friends!"</p>
+                        <div class="testimonial-footer">
+                            <img src="./assets/images/figurehead-2.jpg" alt="Jane Smith" class="testimonial-img">
+                            <span class="testimonial-name">Jane Smith</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide Dots -->
+                <div class="testimonial-dots"></div>
+            </div>
+            <button id="nextBtn" class="nav-btn">&gt;</button>
         </div>
     </section>
 
@@ -112,74 +174,6 @@
         </div>
     </section>
 
-    <section id="testimonials">
-        <h2>Customer Stories</h2>
-        <div class="testimonial-container">
-            <button id="prevBtn" class="nav-btn">&lt;</button>
-            <div class="testimonial-content">
-                <div class="testimonial-track">
-                    <div class="testimonial-card active">
-                        <p class="testimonial-text">"As a mother, my priority is keeping my children safe. ZoyaPel's
-                            natural mosquito repellent gives me peace of mind—no harsh chemicals, just effective
-                            protection for my family. I love that it aligns with my eco-conscious lifestyle!"</p>
-                        <div class="testimonial-footer">
-                            <img src="./assets/profile2.jpg" alt="John Doe" class="testimonial-img">
-                            <span class="testimonial-name">Mensah</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Living in a rural area, finding affordable mosquito protection is a
-                            challenge. ZoyaPel offers an effective solution that fits my budget and keeps my family
-                            safe. It’s a game-changer for communities like mine!"
-                        </p>
-                        <div class="testimonial-footer">
-                            <img src="./assets/profile1.jpg" alt="Abdul Raman" class="testimonial-img">
-                            <span class="testimonial-name">Abdul Raman</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"I always choose natural products to maintain a healthy lifestyle.
-                            ZoyaPel provides powerful protection without harmful chemicals. It’s my go-to repellent, and
-                            I recommend it to my patients and friends!"</p>
-                        <div class="testimonial-footer">
-                            <img src="./assets/profile3.jpg" alt="Jane Smith" class="testimonial-img">
-                            <span class="testimonial-name">Jane Smith</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide Dots -->
-                <div class="testimonial-dots"></div>
-            </div>
-            <button id="nextBtn" class="nav-btn">&gt;</button>
-        </div>
-    </section>
-
-
-
-    <section id="affiliations">
-        <h2>In Good Company</h2>
-        <p class="aff-para">Our journey is strenghtened by the support of these organizations.</p>
-        <div class="affiliations">
-            <div class="affiliations-container">
-                <div class="aff-divs"><img src="./assets/images/UNDP_logo.svg.png" alt="affiliations">
-                    <p>The United Nations Development Programme aims to foster inclusive innovation among diverse youth
-                        populations to address development
-                        challenges. </p>
-                </div>
-                <div class="aff-divs"><img src="./assets/images/mastercard-foundation.png" alt="affiliations">
-                    <p>The Mastercard Foundation works with visionary organizations to empower young people in Africa
-                        to access meaningful, dignified, and fulfilling work. </p>
-                </div>
-                <div class="aff-divs"><img src="./assets/images/mest.png" alt="affiliations">
-                    <p>MEST is an Africa-wide technology entrepreneur training program, internal seed fund, and network
-                        of hubs offering incubation for technology start-ups. </p>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
     <section class="contact-section" id="contact">
         <div class="contact-info">
             <h2>Get in Touch</h2>
@@ -189,10 +183,10 @@
                 <strong> Address:</strong> 123 Main Street, City, Country
             </div>
             <div class="info-item">
-                <strong> Phone:</strong> +123 456 7890
+                <strong> Phone:</strong> +233503267497
             </div>
             <div class="info-item">
-                <strong> Email:</strong> contact@example.com
+                <strong> Email:</strong> akolgodouglas40@gmail.com
             </div>
 
             <div class="social-links">

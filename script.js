@@ -69,19 +69,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const testimonials = document.querySelectorAll(".testimonial-card");
     const dotsContainer = document.querySelector(".testimonial-dots");
     let index = 0;
+    let autoScroll;
 
     // Create slide dots dynamically
     testimonials.forEach((_, i) => {
         const dot = document.createElement("span");
         dot.classList.add("dot");
         if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => changeSlide(i));
+        dot.addEventListener("click", () => changeSlide(i, true));
         dotsContainer.appendChild(dot);
     });
 
     const dots = document.querySelectorAll(".dot");
 
-    function changeSlide(newIndex) {
+    function changeSlide(newIndex, stopAuto = false) {
         testimonials[index].classList.remove("active");
         dots[index].classList.remove("active");
 
@@ -89,39 +90,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
         testimonials[index].classList.add("active");
         dots[index].classList.add("active");
+
+        if (stopAuto) restartAutoScroll();
     }
 
-    // Swipe for mobile
+    // Auto-scroll every 5 seconds
+    function startAutoScroll() {
+        autoScroll = setInterval(() => {
+            changeSlide((index + 1) % testimonials.length);
+        }, 5000);
+    }
+
+    function restartAutoScroll() {
+        clearInterval(autoScroll);
+        startAutoScroll();
+    }
+
+    startAutoScroll(); // Start auto-scrolling on load
+
+    // Swipe for mobile (Swipe Anywhere on Card)
     let touchStartX = 0;
     let touchEndX = 0;
+    const swipeThreshold = 50; // Minimum swipe distance
 
-    document.querySelector(".testimonial-content").addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
+    document.querySelectorAll(".testimonial-card").forEach((card) => {
+        card.addEventListener("touchstart", (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
 
-    document.querySelector(".testimonial-content").addEventListener("touchend", (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        handleSwipe();
+        card.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
     });
 
     function handleSwipe() {
-        const swipeThreshold = 50; // Min swipe distance
-
         if (touchStartX - touchEndX > swipeThreshold) {
             // Swipe Left (Next)
-            changeSlide((index + 1) % testimonials.length);
+            changeSlide((index + 1) % testimonials.length, true);
         } else if (touchEndX - touchStartX > swipeThreshold) {
             // Swipe Right (Prev)
-            changeSlide((index - 1 + testimonials.length) % testimonials.length);
+            changeSlide((index - 1 + testimonials.length) % testimonials.length, true);
         }
     }
 
-    // Desktop Arrows (Keep As Is)
+    // Desktop Arrows (Stop Auto-scroll on Click)
     document.getElementById("prevBtn").addEventListener("click", function () {
-        changeSlide((index - 1 + testimonials.length) % testimonials.length);
+        changeSlide((index - 1 + testimonials.length) % testimonials.length, true);
     });
 
     document.getElementById("nextBtn").addEventListener("click", function () {
-        changeSlide((index + 1) % testimonials.length);
+        changeSlide((index + 1) % testimonials.length, true);
     });
 });
+
