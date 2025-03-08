@@ -47,8 +47,8 @@ header {
 }
 
 .logo {
-    max-width: 80px;
-    height: 70px;
+    /* max-width: 80px; */
+    height: 80px;
     display: block;
     image-rendering: crisp-edges;
     object-fit: contain;
@@ -105,11 +105,11 @@ nav ul {
         position: absolute;
         top: 60px;
         right: 0;
-        background: #209e31;
+        background: #32743c;
         width: 100%;
         text-align: center;
         padding: 20px 0;
-        border-top: 1px solid greenyellow;
+        border-top: 1px solid rgb(0, 0, 0);
     }
 
     nav ul.active {
@@ -128,7 +128,7 @@ nav ul a:not(#contact-btn) {
     font-weight: 500;
     /* Made the font bolder */
     font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
     position: relative;
     padding: 5px 10px;
@@ -205,7 +205,7 @@ section {
 .hero {
     display: flex;
     justify-content: space-between;
-    background-image:  url(./assets/images/repellant\ background.webp);
+    background-image: url(./assets/images/repellant\ background.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -218,7 +218,7 @@ section {
 .hero-content {
     width: 50%;
     height: 100%;
-    
+
 
 }
 
@@ -254,7 +254,7 @@ section {
     max-width: 600px;
     width: 80%;
     margin-left: 0;
-    text-shadow: 0px 0px 15px #000000;    
+    text-shadow: 0px 0px 15px #000000;
 
 }
 
@@ -281,7 +281,7 @@ span {
     color: rgb(0, 0, 0);
     border: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 12px 20px;
     border-radius: 25px;
     transition: background 0.3s ease-in-out;
@@ -322,7 +322,7 @@ span {
         max-width: 700px;
         /* Set max width */
         width: 100%;
-        text-shadow: 0px 0px 15px #000000; 
+        text-shadow: 0px 0px 15px #000000;
     }
 
     .hero-buttons {
@@ -335,7 +335,7 @@ span {
     .btn-green {
         border: none;
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 700;
         padding: 12px 15px;
         margin-top: 5px;
 
@@ -400,7 +400,7 @@ span {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
@@ -429,8 +429,8 @@ span {
 }
 
 .text-content h2 {
-    color: #000000;
-    font-family: 'Libre Baskerville', serif;
+    color: #32743c;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 10px;
@@ -491,8 +491,8 @@ span {
     }
 
     .text-content h2 {
-        color: #000000;
-        font-family: 'Libre Baskerville', serif;
+        color: #32743c;
+        font-family: 'Raleway', sans-serif;
         font-weight: 700;
         font-size: 1.2rem;
 
@@ -524,9 +524,9 @@ span {
 }
 
 #services h2 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 2.0rem;
-    color: #000;
+    color: #32743c;
     /* Black text */
     margin-bottom: 10px;
 }
@@ -588,7 +588,6 @@ span {
 
     #services h2 {
         font-size: 1.3rem;
-        color: #000;
         /* Black text */
         margin-bottom: 10px;
     }
@@ -618,56 +617,68 @@ span {
 }
 
 /* product section  */
-#product-showcase{
+#product-showcase {
     background-color: #ffffff;
     height: 90vh;
 }
+
 .product-showcase {
     display: flex;
-    gap: 50px;
+    gap: 10%;
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-    
+
 }
 
 #product-showcase h2 {
     margin-top: 10px;
     padding-top: 80px;
     font-size: 2.0rem;
-    font-family: 'Libre Baskerville', serif;
-   
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+
 
 }
 
 .product-card {
-    /* background: transparent; */
-    /* padding: 20px; */
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 400px;
     text-align: center;
     width: 100%;
-    
+
 }
 
 .product-card img {
     width: 100%;
+    background: #32743c;
+    padding: 15px;
     border-radius: 10px;
 }
 
 .product-card h3 {
-    margin: 15px 0 10px;
-    font-family: 'Libre Baskerville', serif;
-    color: #32743C;
-    text-shadow: 0px 0px 1px #000000;    
+    /* margin: 15px 0 10px; */
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+    padding-left: 30px;
+    color: #333; /* Adjust for better contrast */
 }
+
+.product-card h3::before {
+    content: "🍃"; /* Leaf emoji */
+    font-size: 1.0rem;
+    padding: 10px;
+}
+
 
 .product-card p {
     color: #1b1b1b;
     font-size: 14px;
-    
+
 }
 
 .product-card img:hover {
@@ -679,13 +690,14 @@ span {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-    #product-showcase{        
+    #product-showcase {
         height: fit-content;
     }
 
     .product-showcase {
         flex-direction: column;
         padding: 20px;
+        gap: 40px;
     }
 
     #product-showcase h2 {
@@ -693,11 +705,12 @@ span {
         font-family: 'Libre Baskerville', serif;
         margin-top: 0px;
         padding-top: 20px;
-    
+
     }
 
-    .product-card {
-        /* max-width: 90%; */
+    .product-card img {
+        padding: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -713,11 +726,11 @@ span {
 }
 
 #testimonials h2 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 2.0rem;
     margin-bottom: 60px;
     color: #000;
-    text-shadow: 0px 0px 3px #ffffff;  
+    text-shadow: 0px 0px 3px #ffffff;
 }
 
 /* 🔹 Carousel Container */
@@ -852,7 +865,7 @@ span {
         font-family: 'Libre Baskerville', serif;
         font-size: 1.3rem;
         margin-bottom: 60px;
-     
+
     }
 
     .testimonial-content {
@@ -871,14 +884,14 @@ span {
 
 /* Contact Section Layout */
 .contact-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/form-bg.webp') no-repeat center center/cover;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/form-bg.webp') no-repeat center center/cover; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 20px 20px;
     gap: 30px;
-    background-color: #dbdde077;
+    background-color: #ffffff77;
     height: 70vh;
 }
 
@@ -887,17 +900,16 @@ span {
     flex: 1;
     min-width: 300px;
     max-width: 30%;
-    padding: 30px;
-
-    /* background: #f0f0f0; */
-    /* border-radius: 8px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    padding: 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/testimonialbg-2.png') no-repeat center center/cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* border: 1px solid #0056b3; */
 }
 
 .contact-info h2 {
     margin-bottom: 10px;
-    color: #cecece;
+    color: #ffffff;
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -905,7 +917,7 @@ span {
 
 .contact-info p {
     margin-bottom: 10px;
-    color: #a0a0a0;
+    color: #c7b0b0;
     font-family: 'Fraunces', serif;
     font-weight: 300;
     font-size: 1.1rem;
@@ -948,7 +960,8 @@ span {
     max-width: 35%;
     /* Make it occupy more space */
     padding: 30px;
-    background: #ffffffee;
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.5)), url('./assets/images/testimonialbg-2.png') no-repeat center center/cover;
+    /* background: #ffffffee; */
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     /* Increased shadow for a "lifted" effect */
@@ -957,7 +970,7 @@ span {
 
 .contact-form h2 {
     margin-bottom: 10px;
-    color: #333;
+    color: #ffffff;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -977,7 +990,7 @@ span {
     font-family: 'Libre Baskerville', serif;
     font-weight: 300;
     font-size: 0.8rem;
-    color: #333;
+    color: #ffffff;
     text-align: left;
 }
 
@@ -1222,7 +1235,7 @@ footer {
 }
 
 .footer-section img {
-    width: 50%;
+    width: 100%;
     height: 40%;
     /* object-fit: cover; */
 
