@@ -205,13 +205,13 @@ section {
 .hero {
     display: flex;
     justify-content: space-between;
-    background-image: url(./assets/images/new-hero.png);
-    background-position: center center;
+    background-image: url(./assets/images/clear.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
     padding: 10px 4%;
-    min-height: 90vh;
+    height: 90vh;
 }
 
 /* Text Content */
@@ -236,11 +236,11 @@ section {
 .hero h1 {
     font-size: 3rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     /* font-family: 'Nunito', sans-serif; */
     margin-bottom: 15px;
     text-align: left;
-    color: white;
+    color: #32743C;
 }
 
 .hero p {
@@ -250,11 +250,11 @@ section {
     line-height: 1.5;
     text-align: left;
     margin-bottom: 25px;
-    color: #ffffff;
+    color: #000000;
     max-width: 600px;
     width: 80%;
     margin-left: 0;
-    text-shadow: 0px 0px 15px #000000;
+    text-shadow: 0px 0px 15px #b1b0b0;
 
 }
 
