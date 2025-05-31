@@ -205,8 +205,8 @@ section {
 .hero {
     display: flex;
     justify-content: space-between;
-    background-image: url(./assets/images/repellant\ background.webp);
-    background-position: center;
+    background-image: url(./assets/images/new-hero.png);
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -616,105 +616,136 @@ span {
     }
 }
 
-/* product section  */
+/* Product Section */
 #product-showcase {
     background-color: #ffffff;
-    height: 90vh;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#product-showcase h2 {
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    margin-bottom: 40px;
 }
 
 .product-showcase {
     display: flex;
-    gap: 10%;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-
+    justify-content: space-around;
+    /* gap: 40px; */
+    flex-wrap: wrap;
 }
 
-#product-showcase h2 {
-    margin-top: 10px;
-    padding-top: 80px;
-    font-size: 2.0rem;
-    font-family: 'Raleway', sans-serif;
-    color: #000000;
-
-
+.flip-card {
+    background-color: transparent;
+    width: 450px;
+    height: 350px;
+    perspective: 1000px;
 }
 
-.product-card {
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 400px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-card-front {
+    background: #f9f9f9;
+}
+
+.flip-card-front img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.flip-card-front h3 {
+    color: #10642c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
     text-align: center;
-    width: 100%;
-
 }
 
-.product-card img {
-    width: 100%;
-    background: #32743c;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.product-card h3 {
-    /* margin: 15px 0 10px; */
-    font-size: 1.4rem;
-    font-weight: bold;
-    position: relative;
-    padding-left: 30px;
-    color: #333; /* Adjust for better contrast */
-}
-
-.product-card h3::before {
-    content: "🍃"; /* Leaf emoji */
-    font-size: 1.0rem;
-    padding: 10px;
-}
-
-
-.product-card p {
+.flip-card-back {
+    background-color: #e9f7ef;
     color: #1b1b1b;
+    transform: rotateY(180deg);
     font-size: 14px;
-
+    line-height: 1.5;
 }
 
-.product-card img:hover {
-    transform: scale(1.0);
-    transition: transform 0.5s ease-in-out;
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
+.flip-card-back p {
+    font-family: 'Nunito', sans-serif;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-
     #product-showcase {
-        height: fit-content;
+        padding: 60px 10px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #product-showcase h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
     }
 
     .product-showcase {
         flex-direction: column;
-        padding: 20px;
-        gap: 40px;
+        align-items: center;
+        gap: 60px;
     }
 
-    #product-showcase h2 {
-        font-size: 1.3rem;
-        font-family: 'Libre Baskerville', serif;
-        margin-top: 0px;
-        padding-top: 20px;
-
+    .flip-card {
+        width: 90%;
+        max-width: 300px;
+        height: 300px;
+        margin: 0 auto;
     }
 
-    .product-card img {
-        padding: 10px;
-        margin-right: 10px;
+    .flip-card-front h3 {
+        font-size: 1rem;
+    }
+
+    .flip-card-back {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    /* Disable hover-based flip on mobile */
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+
+    /* Enable JS-controlled flip on mobile */
+    .flip-card-inner.flipped {
+        transform: rotateY(180deg);
     }
 }
-
-
 /* 🔹 Testimonials Section */
 #testimonials {
     height: 70vh;

@@ -144,3 +144,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const flipCards = document.querySelectorAll(".flip-card");
+
+    flipCards.forEach(card => {
+        card.addEventListener("click", () => {
+            // Toggle flip manually on click (for mobile)
+            card.querySelector(".flip-card-inner").classList.toggle("flipped");
+        });
+    });
+});
