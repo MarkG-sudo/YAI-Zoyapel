@@ -294,68 +294,85 @@ span {
 
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        /* padding: 30px 0%; */
+        /* Adjust background image sizing for small screens */
+        background-size: cover;
+        background-position: center top;
+        min-height: 400px;
+        height: 60vh;
+        padding: 20px 0;
     }
 
     .hero-content {
-        /* max-width: 90%; */
-        justify-self: left;
-        padding-top: 80px;
-        margin-right: 150px;
+        width: 100%;
+        padding-top: 40px;
+        margin: 0 auto;
+        /* Remove side margin for small screens */
     }
 
     .hero h1 {
-        font-size: 22px;
+        font-size: 1.5rem;
         font-family: 'Nunito', sans-serif;
-        margin-top: 60px;
-        margin-bottom: 20px;
-        justify-content: left;
+        margin-top: 40px;
+        margin-bottom: 16px;
+        text-align: center;
     }
 
     .hero p {
-        font-size: 15px;
-        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
         line-height: 1.6;
         color: #ffffff;
-        max-width: 700px;
-        /* Set max width */
+        max-width: 95vw;
         width: 100%;
         text-shadow: 0px 0px 15px #000000;
+        margin: 0 auto 18px auto;
+        text-align: center;
     }
 
     .hero-buttons {
-        justify-content: left;
+        justify-content: center;
         margin-bottom: 20px;
     }
 
-
-
     .btn-green {
         border: none;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 700;
-        padding: 12px 15px;
+        padding: 10px 16px;
         margin-top: 5px;
+    }
+}
 
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 250px;
+        height: 45vh;
+        background-size: cover;
+        background-position: center top;
+        padding: 10px 0;
     }
 
-    /* .btn-white {
-        border: none;
-        font-size: 12px;
-        font-weight: bold;
-        padding: 12px 10px;
-
-    } */
-
-    .main-img {
-        display: none
+    .hero-content {
+        padding-top: 50px;
+        padding-top: 20px;
     }
 
+    .hero h1 {
+        font-size: 1.3rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
 
+    .hero p {
+        font-size: 0.9rem;
+        max-width: 98vw;
+        margin-bottom: 12px;
+    }
 }
 
 /* About Section */
