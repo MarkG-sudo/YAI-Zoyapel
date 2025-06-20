@@ -584,13 +584,9 @@ span {
     object-position: top;
 }
 
-#small {
-    object-position: top;
-}
-
-#small2 {
+/* #small2 {
     height: 220px;
-}
+} */
 
 .card-image img {
     width: 100%;
@@ -651,11 +647,12 @@ span {
     }
 
     .team-container {
-        gap: 15px;
+        gap: 35px;
     }
 
     .team-card {
         flex: 0 0 250px;
+        
     }
 
     .card-image {
@@ -1548,11 +1545,22 @@ footer {
     }
 
     .footer-section img {
-        width: 100px;
-        height: 100px;
+        width: 40%;
+        height: 40%;
         /* object-fit: cover; */
 
     }
+    .info-item {
+        font-size: 14px;
+        color: white;
+
+    }
+
+
+    .contact-form h2 {
+        font-size: 15px;
+    }
+    
 
     .social-icons {
         gap: 8px;
